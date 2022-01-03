@@ -19,6 +19,7 @@
     --black0: #000;
     --black1: #222;
     --black2: #999;
+    --grad1: linear-gradient(to right, #2C5364, #203A43, #0F2027);
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 /*btn*/
 .btn {
     position: relative;
-    padding: 5px 10px;
+    padding: 10px 15px;
     background: var(--blue);
     text-decoration: none;
     color: var(--white);
@@ -44,6 +45,15 @@ body {
 .btn-black {
     background: var(--black0);
     color: var(--white);
+}
+
+.btn-delete {
+    background: #CC0000;
+}
+/**/
+
+.title {
+    padding: 0px 70px 0px 50px;
 }
 
 /* Main Menu */
@@ -228,6 +238,8 @@ body {
     height: 100%;
 }
 
+/*Main Page*/
+
 .card {
     position: relative;
     width: 100%;
@@ -275,6 +287,7 @@ body {
 
 .card-item:hover {
     background: linear-gradient(180deg, #2C5364, #203A43, #0F2027);
+    transform: rotateZ(2deg);
 }
 
 .card-item:hover .card-item__count,
@@ -316,49 +329,68 @@ body {
     color: var(--black0);
 }
 
-.details table {
+.details table,
+.section-category table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-.details table thead td {
+.details table thead td,
+.section-category thead th {
     font-weight: 600;
 }
 
-.details .user-list table tr {
+.details .user-list table tr,
+.section-category table tr {
     color: var(--black1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.details .user-list table tr:last-child {
+.details .user-list table tr td a,
+.section-category table tr td a {
+    text-decoration: none;
+    color: var(--black1);
+}
+
+.details .user-list table tr:last-child,
+.section-category table tr:last-child{
     border-bottom: none;
 }
 
-.details .user-list table tbody tr:hover {
-    background: var(--blue);
+.details .user-list table tbody tr:hover,
+.section-category table tbody tr:hover{
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.details .user-list table tbody tr:hover td,
+.section-category table tbody tr:hover td {
     color: var(--white);
 }
 
-.details .user-list table tr td {
+.details .user-list table tbody tr:hover td a,
+.section-category table tbody tr:hover td a{
+    color: var(--white);
+}
+
+.details .user-list table tr td,
+.section-category table tr td{
     padding: 10px;
 }
 
-.details .user-list table tr td:last-child {
+.details .user-list table tr td:last-child,
+.section-category table tr td:last-child{
     text-align: end;
 }
 
-.details .user-list table tr td:nth-child(2) {
+.details .user-list table tr td:nth-child(2),
+.section-category table tr td:nth-child(2){
+    text-align: start;
+}
+
+.details .user-list table tr td:nth-child(3),
+.section-category table tr td:nth-child(3){
     text-align: end;
-}
-
-.details .user-list table tr td:nth-child(3) {
-    text-align: center;
-}
-
-.details .user-list table tr td a {
-    text-decoration: none;
-    color: var(--black1);
 }
 
 .admin-list {
@@ -404,10 +436,49 @@ body {
 }
 
 .admin-list table tr:hover {
-    background: var(--blue);
+    background: var(--grad1);
     color: var(--white);
 }
 
 .admin-list table tr:hover td h4 span {
     color: var(--white);
 }
+
+/*Category Page*/
+
+.section-category {
+    position: relative;
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 8%);
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.section-category ion-icon {
+    position: absolute;
+    top: 4.7%;
+    left: 1.5%;
+    width: 30px;
+    height: 30px;
+}
+
+/* Switch upper */
+.button {
+    margin-top: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.btn-list {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+/**/
