@@ -446,7 +446,8 @@ body {
 
 /*Category Page*/
 
-.section-category {
+.section-category,
+.section-post {
     position: relative;
     display: grid;
     grid-template-rows: 0.3fr 2fr;
@@ -460,7 +461,8 @@ body {
     margin-left: 20px;
 }
 
-.section-category ion-icon {
+.section-category ion-icon,
+.section-post ion-icon{
     position: absolute;
     top: 4.7%;
     left: 1.5%;
