@@ -16,6 +16,7 @@
     --blue: #287bff;
     --white: #fff;
     --grey: #f5f5f5;
+    --black0: #000;
     --black1: #222;
     --black2: #999;
 }
@@ -30,12 +31,29 @@ body {
     width: 100%;
 }
 
+/*btn*/
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.btn-black {
+    background: var(--black0);
+    color: var(--white);
+}
+
 /* Main Menu */
 .menu {
     position: fixed;
     width: 300px;
     height: 100%;
-    background: var(--blue);
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: 0.5s;
     overflow-x: hidden;
 }
@@ -80,7 +98,7 @@ body {
 
 .main-menu__item-link:hover,
 .main-menu__item-link .hovered {
-    color: var(--blue);
+    color: var(--black0);
 }
 
 .main-menu__logo-icon {
@@ -241,7 +259,7 @@ body {
     position: relative;
     font-weight: 700;
     font-size: 2.5em;
-    color: var(--blue);
+    color: var(--black0);
 }
 
 .card-item .card-item__title {
@@ -256,11 +274,140 @@ body {
 }
 
 .card-item:hover {
-    background: var(--blue);
+    background: linear-gradient(180deg, #2C5364, #203A43, #0F2027);
 }
 
 .card-item:hover .card-item__count,
 .card-item:hover .card-item__title,
 .card-item:hover .card-item__icon-box{
+    color: var(--white);
+}
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+.user-list {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+
+.user-list__item-top,
+.admin-list__item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-list__item-top h2,
+.admin-list__item-top h2 {
+    font-weight: 600;
+    color: var(--black0);
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .user-list table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.details .user-list table tr:last-child {
+    border-bottom: none;
+}
+
+.details .user-list table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.details .user-list table tr td {
+    padding: 10px;
+}
+
+.details .user-list table tr td:last-child {
+    text-align: end;
+}
+
+.details .user-list table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .user-list table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.details .user-list table tr td a {
+    text-decoration: none;
+    color: var(--black1);
+}
+
+.admin-list {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.admin-list__item-img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.admin-list__item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-list table tr td {
+    padding: 12px 10px;
+}
+
+.admin-list table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.admin-list table tr td h4 span {
+    font-size: 14px;
+    color: var(--black2);
+}
+
+.admin-list table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.admin-list table tr:hover td h4 span {
     color: var(--white);
 }
