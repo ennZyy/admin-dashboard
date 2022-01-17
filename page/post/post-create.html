@@ -97,9 +97,50 @@
                 <h1 class="title">Create Post</h1>
 
                 <div class="post">
-                    <form action="#">
+                    <form id="msform">
+                        <ul class="progress-bar" id="progressbar">
+                            <li class="active">Post Data</li>
+                            <li>Image Picker</li>
+                            <li>Preview</li>
+                        </ul>
 
+                        <!-- New Item -->
+                        <fieldset>
+                            <h2 class="fs-title">Inter Post Data</h2>
+                            <h3 class="fs-subtitle">This is step 1</h3>
+                            <input type="text" name="title" placeholder="Title Of Post" />
+                            <input type="text" name="description" placeholder="Description Of Post" />
+                            <input type="text" name="slug" placeholder="Slug" />
+                            <a class="btn btn-black" id="select-image">Select Image</a>
+                        </fieldset>
+                        <!-- End New Item -->
+
+                        <!-- New Item -->
+                        <fieldset>
+                            <h2 class="fs-title">Social Profiles</h2>
+                            <h3 class="fs-subtitle">Your presence on the social network</h3>
+                            <input type="text" name="twitter" placeholder="Twitter" />
+                            <input type="text" name="facebook" placeholder="Facebook" />
+                            <input type="text" name="gplus" placeholder="Google Plus" />
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            <a href="#" class="btn btn-black">Create</a>
+                        </fieldset>
+                        <!-- End New Item -->
+
+                        <!-- New Item -->
+                        <fieldset>
+                            <h2 class="fs-title">Personal Details</h2>
+                            <h3 class="fs-subtitle">We will never sell it</h3>
+                            <input type="text" name="title" placeholder="Title Of Post" />
+                            <input type="text" name="description" placeholder="Description Of Post" />
+                            <input type="text" name="slug" placeholder="Slug" />
+                            <textarea name="address" placeholder="Address"></textarea>
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            <a href="#" class="btn btn-black">Create</a>
+                        </fieldset>
+                        <!-- End New Item -->
                     </form>
+
                 </div>
             </div>
             <!--

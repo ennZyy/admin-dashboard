@@ -21,3 +21,19 @@ function activeLink() {
         this.classList.add('hovered');
     })
 }
+
+//Switcher List
+
+let switcherList = document.querySelectorAll('.progress-bar li')
+
+let btnSelectImage = document.getElementById('select-image')
+
+btnSelectImage.onclick = function() {
+    switcherList.forEach((item, i, arr) => {
+        if (item.classList.contains('active') === true)
+            item.classList.remove('active')
+        if (i === 1)
+            item.classList.add('active')
+    })
+};
+
